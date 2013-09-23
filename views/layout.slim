@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title RSS Post to Twitter
+    link href="assets/bootstrap/bootstrap.css" rel="stylesheet"
+    link href="assets/css/style.css" rel="stylesheet"
+    script type="text/javascript" src="assets/js/jquery-2.0.3.min.js"
+    script type="text/javascript" src="assets/js/lodash.min.js"
+    script type="text/javascript" src="assets/js/backbone-min.js"
+    script type="text/javascript" src="assets/js/list.js"
+  body
+    header class="navbar navbar-inverse navbar-static-top bs-docs-nav bs-header" role="banner"
+      div class="container"
+        div class="title"
+          a class="navbar-brand" RSS Postter
+        div class="btn-logout"
+          - if session[:user]
+            button type="button" class="btn btn-primary btn-sm"
+              a href="/logout" class="logout" ログアウト
+    div class="container bs-docs-container"
+      div class="row"
+        div class="col-md-3"
+        div class="col-md-6"
+          == yield
+        div class="col-md-4"
+  div id="footer"
+    p Copyright © 2013 mr-myself.

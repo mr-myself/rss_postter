@@ -1,0 +1,21 @@
+div class="form-container"
+  div class="row"
+    form method="post" action="/register" class="form-horizontal" role="form"
+      div class="col-md-offset-2 col-md-7"
+        input type="text" class="form-control url" name="url" placeholder="http://"
+      div class="col-md-2"
+        button type="submit" class="btn btn-info submit" 登録
+
+table id="js-list-table" class="table table-hover table-bordered"
+  thead
+    tr
+      th 最新のタイトル
+      th URL
+      th
+
+  tbody id="js-list"
+    script id="js-list-template" type="text/template"
+      td <%- title %>
+      td <%- url %>
+      td
+        button type="button" class="js-delete btn btn-primary btn-xs" 削除
