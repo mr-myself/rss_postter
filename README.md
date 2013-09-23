@@ -4,6 +4,15 @@ RSS Postter
 If you register RSS feed URL, this app post to twitter account as mentions automatically.
 
 ------
+
+## About development environment
+ * Ruby 2.0.0 (maybe it works 1.9* also)
+ * Sinatra (Web Application Framework for Ruby)
+ * Slim (template engine for Ruby)
+ * Backbone.js (Web Application Framework for JavaScript)
+ * SQLite3 (of course, you can change this easilly)
+
+
 ### First to start this, what you should do are... 
 
  * git clone
