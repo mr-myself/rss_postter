@@ -48,7 +48,7 @@ $(function() {
 
     ListView.prototype.initialize = function() {
       this.listenTo(this.model, "add", this.render);
-      return this.listenTo(this.model, "destroy", this.render);
+      return this.listenTo(this.model, "destroy", this.remove);
     };
 
     ListView.prototype["delete"] = function() {
@@ -78,7 +78,7 @@ $(function() {
 
     ListsView.prototype.initialize = function() {
       this.listenTo(this.collection, "add", this.add);
-      this.listenTo(this.collection, "destroy", this.remove);
+      this.listenTo(this.collection, "destroy");
       return this.collection.fetch();
     };
 

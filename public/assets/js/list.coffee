@@ -15,7 +15,7 @@ $ ->
 
     initialize: ->
       @listenTo @model, "add", @render
-      @listenTo @model, "destroy", @render
+      @listenTo @model, "destroy", @remove
 
     delete: ->
       @model.destroy({ wait: true, merge: true })
@@ -29,7 +29,7 @@ $ ->
 
     initialize: ->
       @listenTo @collection, "add", @add
-      @listenTo @collection, "destroy", @remove
+      @listenTo @collection, "destroy"
       @collection.fetch()
 
     add: (list)->
