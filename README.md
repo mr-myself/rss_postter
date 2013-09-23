@@ -21,6 +21,11 @@ If you register RSS feed URL, this app post to twitter account as mentions autom
  * register this app on twitter developer site
  * ready config.yml
 
+This app can use rack, so just type
+```console
+$ bundle exec rackup
+```
+
 ### Create Database
 Make 'rss_post.db' file on the app root, and type the command.
 
